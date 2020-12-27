@@ -10,6 +10,6 @@ if (process.env.appenv === "dev") {
   app.use(express.urlencoded({ extended: false }));
 }
 
-app.get("/", handler);
+app.get("/api", handler);
 
 module.exports = app;
