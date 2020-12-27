@@ -20,13 +20,13 @@ const endpoints = {
     method: "GET",
   }),
   turnos: (fecha, idClase) => ({
-    url: `https://api.turni.to/api/user/megatlon/service/${idClase}/slots/${fecha}`, // 2020-12-28
+    url: `https://api.turni.to/api/user/megatlon/service/${idClase}/slots/${fecha}`,
     method: "GET",
   }),
   reserva: (start, end, idClase) => ({
     url: `https://api.turni.to/api/user/megatlon/service/${idClase}/reservation`,
     method: "POST",
-    data: { start, end }, // {"start":"2020-12-28T07:00","end":"2020-12-28T08:00"}
+    data: { start, end },
   }),
 };
 
