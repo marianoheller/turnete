@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const handler = require("./handler");
 const app = express();
 
-if (process.env.env === "dev") {
+if (process.env.appenv === "dev") {
   app.set("port", process.env.PORT || 3000);
   app.use(morgan("dev"));
   app.use(express.urlencoded({ extended: false }));
