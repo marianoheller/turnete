@@ -1,5 +1,3 @@
 # Turnete
 
-
-## Run local
-`firebase functions:config:get > .runtimeconfig.json`
+Hosteado en https://vercel.com
