@@ -117,3 +117,4 @@ dist
 
 # Firebase
 .runtimeconfig.json
+.firebase/

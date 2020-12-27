@@ -1,7 +1,6 @@
 const axios = require("axios");
-const env = require("./env");
 
-const token = env.turnete.token || "NO TOKEN!";
+const token = process.env.apptoken || "NO TOKEN!";
 console.log("Using token: ", token);
 
 axios.interceptors.request.use(function (config) {
