@@ -1,5 +1,5 @@
 const { parse, isSameDay, compareAsc } = require("date-fns");
-const { FORMAT_DATE, FORMAT_DATE_TIME } = require("./utils/date");
+const { FORMAT_DATE, FORMAT_DATE_TIME } = require("./utils");
 
 const resources = require("./resources");
 
@@ -54,7 +54,7 @@ const classHandler = async (classId) => {
 };
 
 const getIds = () => {
-  const ids = process.env.IDS || "";
+  const ids = process.env.appids || "";
   return ids.split(",") || [];
 };
 

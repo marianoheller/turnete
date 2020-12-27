@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const token = process.env.TOKEN || "NO TOKEN!";
+const token = process.env.apptoken || "NO TOKEN!";
 console.log("Using token: ", token)
 
 
