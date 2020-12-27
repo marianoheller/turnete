@@ -40,17 +40,16 @@ const classHandler = async (classId) => {
     return acc;
   }, []);
 
-  /*
   const responseReserva = await Promise.all(
     turnosAReservar.map(({ start, end }) =>
       resources.reserva(start, end, classId)
     )
   );
 
-  res.send(responseReserva.map((r) => r.data));
-   */
-
-  return turnosAReservar;
+  return {
+    turnosAReservar,
+    responseReserva: responseReserva.map((r) => r.data),
+  };
 };
 
 const getIds = () => {
