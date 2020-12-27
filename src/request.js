@@ -1,8 +1,8 @@
 const axios = require("axios");
+const env = require("./env");
 
-const token = process.env.apptoken || "NO TOKEN!";
-console.log("Using token: ", token)
-
+const token = env.turnete.token || "NO TOKEN!";
+console.log("Using token: ", token);
 
 axios.interceptors.request.use(function (config) {
   config.headers["X-Authorization"] = token;
