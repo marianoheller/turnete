@@ -15,9 +15,10 @@ const classHandler = async (classId) => {
     resources.fechas(classId),
   ]);
 
-  const misFechasYaRegistradas = misTurnosData.elements.map(({ start }) =>
-    parseDateTime(start)
-  );
+  const misFechasYaRegistradas = misTurnosData.elements
+    .filter(({ status }) => status === "ACCEPTED")
+    .map(({ start }) => parseDateTime(start));
+
   const fechasLibres = fechasData.dates.filter((dateStr) => {
     const parsed = parseDate(dateStr);
     return !misFechasYaRegistradas.find((d) => isSameDay(d, parsed));
