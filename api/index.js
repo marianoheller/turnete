@@ -4,10 +4,12 @@ const morgan = require("morgan");
 const handler = require("./handler");
 const app = express();
 
-app.set("port", process.env.PORT || 3000);
-app.use(morgan("dev"));
-app.use(express.urlencoded({ extended: false }));
+if (process.env.env === "dev") {
+  app.set("port", process.env.PORT || 3000);
+  app.use(morgan("dev"));
+  app.use(express.urlencoded({ extended: false }));
+}
 
-app.use("/", handler);
+app.get("/", handler);
 
 module.exports = app;
